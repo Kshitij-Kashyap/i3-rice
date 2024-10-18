@@ -21,6 +21,7 @@ font pango:Monocraft Nerd Font 20
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
+
 exec --no-startup-id dex-autostart --autostart --environment i3
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
@@ -34,10 +35,15 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Screen brightness
+# Screen brightnes using brightnessctl
+
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
 #bindsym xrandr --output eDP --brightness +0.05
 #bindsym xrandr --output eDP --brightness -0.05
+#bindsym F6 exec light -U 5
+#bindsym F7 exec light -A 5
 
 
 # Use pactl to adjust volume in PulseAudio.
@@ -226,6 +232,10 @@ client.background       #FFFFFF
 
 exec_always --no-startup-id "bash ~/.config/polybar/launch.sh --colorblocks" 
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-3/launcher.sh
+
+# Compositor
+
+exec_always picom
 
 exec_always nitrogen --restore
 
