@@ -27,6 +27,7 @@ Audio manager: pipewire-pulse
 - kitty terminal
 - neovim
 - rofi
+- dunst
 - betterlockscreen
 
 ## Installation
