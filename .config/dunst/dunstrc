@@ -1,0 +1,79 @@
+# General Settings
+[global]
+    monitor = 0
+    follow = mouse
+
+    ### Geometry ###
+    width = 300
+    height = 100
+    origin = top-right
+    offset = 10x50
+
+    ### Progress bar ###
+    progress_bar = true
+    progress_bar_height = 8
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+
+    transparency = 10
+    separator_height = 1
+    padding = 10
+    horizontal_padding = 10
+    text_icon_padding = 5
+    frame_width = 2
+    frame_color = "#00bfa5"            # Teal frame color
+    separator_color = frame
+
+    ### Behavior ###
+    sort = yes
+    idle_threshold = 120
+
+    ### Text ###
+    font = Monocraft 10
+    line_height = 0
+    markup = full
+    format = "%s %p\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    show_indicators = yes
+
+    ### Icons ###
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 64
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+
+    ### History ###
+    sticky_history = yes
+    history_length = 20
+
+    ### Misc ###
+    dmenu = /usr/bin/dmenu -p dunst:
+    browser = /usr/bin/firefox -new-tab
+    title = Dunst
+    class = Dunst
+    corner_radius = 8
+    ignore_dbusclose = false
+
+# Urgency-Based Configurations
+[urgency_low]
+    background = "#ffffff"            # White background for low urgency
+    foreground = "#00796b"            # Dark teal text for readability
+    timeout = 5
+
+[urgency_normal]
+    background = "#ffffff"
+    foreground = "#00bfa5"            # Cyan/teal text for normal urgency
+    timeout = 10
+
+[urgency_critical]
+    background = "#ffffff"
+    foreground = "#d32f2f"            # Red text to grab attention
+    frame_color = "#d32f2f"           # Red frame for emphasis on critical alerts
+    timeout = 0
+

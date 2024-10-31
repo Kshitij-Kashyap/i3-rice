@@ -74,6 +74,10 @@ bindsym $mod+Shift+q kill
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
+# Compositor
+
+exec --no-startup-id picom
+
 # feh
 
 exec_always feh --bg-fill ~/Downloads/miku.jpg
@@ -233,9 +237,7 @@ client.background       #FFFFFF
 exec_always --no-startup-id "bash ~/.config/polybar/launch.sh --colorblocks" 
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-3/launcher.sh
 
-# Compositor
 
-exec_always picom
 
 exec_always nitrogen --restore
 
